@@ -1,0 +1,29 @@
+""""
+*author - adnan shaikh
+*date -  15/12/2020
+*package - Bridgelabz
+*Title -  Takes an input N and prints the table of 2
+"""
+
+import sys
+
+
+class Power:
+    def get_Power(self, num):
+        """
+             Purpose:This function prints the power of twos
+             Parameters:Takes one input integer N and prints table of 2.
+        """
+        power = 1
+        for var in range(1, num + 1):
+            power = power * 2
+            print(power)
+
+
+if __name__ == '__main__':
+    try:
+        Arg = int(sys.argv[1])  # Takes command line argument
+        obj = Power()  # Object is created of class getPower
+        obj.get_Power(Arg)
+    except Exception:  # catches exception if throws any
+        print("Enter valid input")
